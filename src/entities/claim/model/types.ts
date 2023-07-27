@@ -6,28 +6,28 @@ import type { Status } from "entities/status-history/model";
 
 export interface Claim {
     id: number;
-    created_date: string;
-    updated_date: string;
-    created_by: string;
-    updated_by: string;
+    createdDate: string;
+    updatedDate: string;
+    createdBy: string;
+    updatedBy: string;
     assignee?: string;
     status: string;
-    status_reason: string;
-    pause_till?: string;
+    statusReason: string;
+    pauseTill?: string;
     category: string;
     channel?: string;
-    initiator_type?: string;
-    is_first_line?: boolean;
-    claim_type?: string;
-    claim_theme?: string;
-    service_count?: number;
+    initiatorType?: string;
+    isFirstLine?: boolean;
+    claimType?: string;
+    claimTheme?: string;
+    serviceCount?: number;
     priority?: string;
-    priority_reason?: string;
+    priorityReason?: string;
     description?: string;
     comment?: string;
     client?: Client;
     documents: Document[];
-    status_history: Status[]
+    statusHistory: Status[]
   }
 
 
