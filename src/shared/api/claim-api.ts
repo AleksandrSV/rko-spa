@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import type { Claim, UpdateReq,
              CloseReq, ForwardReq, 
-             PauseReq, ClaimReq } from 'entities/claim/model';
+             PauseReq} from 'entities/claim/model';
 import type { References } from 'entities/reference'
 // import {updateToken, useKeycloak} from "shared/lib/vue-keycloak/src/vue3-keycloak.js";
 
@@ -58,6 +58,9 @@ export const getClaims = async () => {
 
 export const getClaimById = async (id: number) => {
     return (await api.get<Claim>(`/claim/${id}`)).data
+}
+
+class ClaimReq {
 }
 
 export const createClaim = async (claim: ClaimReq) => {
