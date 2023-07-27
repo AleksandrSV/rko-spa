@@ -1,9 +1,10 @@
 export interface Client {
     id: bigint;
-    global_company_id?: bigint;
+    globalCompanyId?: bigint|null;
+    plCompanyId?: bigint|null;
     inn: string;
     kpp?: string;
     ogrn: string;
-    full_name: string;
-    short_name: string;
+    fullName: string;
+    shortName: string;
 }

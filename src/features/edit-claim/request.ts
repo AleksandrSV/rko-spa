@@ -4,13 +4,13 @@ import type { Client } from "entities/client/model";
 
 export const claimtoReq = (claim: Claim): ClaimReq => {
     const crClient: CRClient = {
-      globalCompanyId: claim.client?.global_company_id ? Number(claim.client.global_company_id) : 0,
+      globalCompanyId: claim.client?.globalCompanyId ? Number(claim.client.globalCompanyId) : 0,
       plCompanyId: claim.client?.id.toString() || '',
       inn: claim.client?.inn || '',
       kpp: claim.client?.kpp || '',
       ogrn: claim.client?.ogrn || '',
-      fullName: claim.client?.full_name || '',
-      shortName: claim.client?.short_name || '',
+      fullName: claim.client?.fullName || '',
+      shortName: claim.client?.shortName || '',
     };
   
     const nonEmptyProps: Partial<ClaimReq> = {
