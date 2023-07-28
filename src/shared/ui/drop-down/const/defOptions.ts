@@ -1,4 +1,4 @@
-import type { ReferenceData } from "entities/reference";
+import type { ReferenceData } from "interfaces/References";
 
 export const defOptions: ReferenceData[] = [
     { code:"ONE",text: 'Вар 1' },

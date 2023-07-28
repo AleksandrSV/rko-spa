@@ -35,7 +35,7 @@ const formRef = ref(null);
                 v-model="claim.client!.inn"
                 prop="clientInfo"
                 label="Клиент"
-                placeholder="Введите ИНН"
+                placeholder="ИНН 1234 Дмитрий А"
                 width="100%"
             />
         </div>

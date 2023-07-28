@@ -38,9 +38,9 @@ const {edit} = useEditClaimStore()
         justify-content: space-between;
         gap: 1rem;
 
-        border-right: 1px solid var(--surface-fill-2);
-        border-bottom: 1px solid var(--surface-fill-2);
-        background: var(--background-surface-area);
+        border-right: 1px solid var(--surface-fill-2, #EFEFEB);
+        border-bottom: 1px solid var(--surface-fill-2, #EFEFEB);
+        background: var(--background-surface-area, #FFF);
     }
     .content{
         display: flex;
@@ -49,10 +49,10 @@ const {edit} = useEditClaimStore()
         align-items: start
     }
     .id{
-        color: var(--text-icons-tertiary);
+        color: var(--text-icons-tertiary, #B5B5B5);
     }
     .type{
-        color: var(--text-icons-primary);
+        color: var(--text-icons-primary, #19191A);
     }
     .btns{
         display: flex;

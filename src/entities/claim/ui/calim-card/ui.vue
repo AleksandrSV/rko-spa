@@ -4,7 +4,8 @@ import { SqBadge } from 'shared/ui/sq-badge';
 import { Badge } from 'shared/ui/badge';
 import { Menu } from 'shared/ui/menu'
 import { computed } from 'vue';
-import { Alert } from 'app/providers/icons';
+//@ts-ignore 
+import Alert from '/alert.svg'
 
 const props = defineProps<{
     type: string
@@ -35,7 +36,7 @@ const badgeType = computed(()=>conf.isExpired.value?'red':'gray')
                  <div class="d-flex gap-2">
                     <Badge v-if="type=='new'" size="small" type="red">{{ conf.minsFromCreation() }} мин</Badge>
                     <Badge v-else-if="conf.isExpired.value" size="small" type="expired">Просрочена</Badge>
-                    <img  v-if="claim.priority=='CRITICAL'" :src="Alert" alt="!"/>
+                    <img  v-if="claim.priority=='CRITICAL'" :src="Alert"/>
                  </div>
                  
             </div>
@@ -48,22 +49,22 @@ const badgeType = computed(()=>conf.isExpired.value?'red':'gray')
         width: 100%;
         padding: 1rem;
         border-radius: 0.75rem;
-        background: var(--background-surface-area);
+        background: var(--background-surface-area, #FFF);
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
     }
     .name{
         overflow: hidden;
-        color: var(--text-icons-primary);
+        color: var(--text-icons-primary, #19191A);
         text-overflow: ellipsis;
     }
     .type{
         overflow: hidden;
-        color: var(--text-icons-primary);
+        color: var(--text-icons-primary, #19191A);
         text-overflow: ellipsis;
     }
     .theme{
         overflow: hidden;
-        color: var(--text-icons-secondary);
+        color: var(--text-icons-secondary, #656567);
         text-overflow: ellipsis;
     }
 </style>

@@ -1,8 +1,7 @@
 @import url('./styles/typography.css');
-@import url('./styles/vars.css');
 
 body{
-    background: var(--background-default);
+    background: var(--background-default, #F6F6F4);
     margin: 0;
 }
 
@@ -16,10 +15,5 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center
-}
-
-.pl-input__wrapper.search, .pl-input__inner.search{
-    background: var(--neutral-02) !important;
-    border: 0 !important;
 }
 

@@ -24,7 +24,7 @@ export const useModalStore = defineStore('modal', () => {
     isOpen.value = true
   }
 
-  const closeModal = () => {
+  function closeModal() {
     isOpen.value = false
   }
 

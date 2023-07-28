@@ -20,14 +20,14 @@ defineProps<{
         gap: 0.5rem;
         align-self: stretch;
         border-radius: 3rem;
-        border: 2px solid var(--border-inactive);
+        border: 2px solid var(--border-inactive, #DADDE7);
         background-color: white;
     }
     .active{
-        border: 2px solid var(--border-active);
+        border: 2px solid var(--border-active, #4164EB);
     }
     button:hover{
-        background: var(--surface-opacity-1);
+        background: var(--surface-opacity-1, rgba(25, 25, 26, 0.04));
     }
     
 </style>

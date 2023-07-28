@@ -3,10 +3,8 @@ import { useClaimStore } from 'entities/claim';
 import { ListItem } from 'entities/claim/ui/list-item';
 import { DropDown } from 'shared/ui/drop-down';
 import { ref } from 'vue';
-import { IcoBtn } from 'shared/ui/ico-button';
-import { Sort } from 'app/providers/icons'
 const store = useClaimStore()
-const sortBtn = {ico: Sort, active: true}
+
 const search = ref()
 </script>
 <template>
@@ -14,9 +12,9 @@ const search = ref()
         <div class="d-flex-cb">
             <PlInputPlus class="search" placeholder="Поиск" leftIcon="Search20" width="20rem" v-model="search"/>
             <div class="filters d-flex gap-6">
-                <DropDown grey placeholder="Все"/>
-                <DropDown grey placeholder="Последние 30 дней"/>
-                <IcoBtn size="small" :data="sortBtn"></IcoBtn>
+                <DropDown/>
+                <DropDown/>
+                <!--<IcoBtn :></IcoBtn>-->
             </div>
         </div>
         <div class="d-grid">
@@ -35,7 +33,7 @@ const search = ref()
         gap: 2.5rem;
 
         border-radius: 1rem;
-        border: 1px solid var(--border-divider);
-        background: var(--background-surface-area);
+        border: 1px solid var(--border-divider, #E3E3E3);
+        background: var(--background-surface-area, #FFF);
     }
 </style>

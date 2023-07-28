@@ -1,7 +1,5 @@
-
-import type { CRClient, Claim, ClaimReq } from "entities/claim";
-
-
+import type { CRClient, Claim} from "entities/claim";
+import type {CreateReq} from "entities/claim";
 
 
 export const claimtoReq = (claim: Claim): CreateReq => {

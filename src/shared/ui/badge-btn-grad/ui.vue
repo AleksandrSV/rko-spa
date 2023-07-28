@@ -17,7 +17,7 @@ defineProps<{
 .outer{
     cursor: pointer;
     display: flex;
-    background: var(--buttons-secondary);
+    background: var(--buttons-secondary, #EDEDED);
     width:7.5rem;
     height: 2.5rem; 
     border-radius: 2rem;
@@ -31,9 +31,9 @@ defineProps<{
     width: 116px;
     height: 36px; 
     border-radius: 2rem;
-    background: var(--buttons-secondary);
+    background: var(--buttons-secondary, #EDEDED);
 
-    color: var(--text-icons-primary);
+    color: var(--text-icons-primary, #19191A);
 }
 .outer:hover>.inner{
     background-color: #e7e7e7;
@@ -54,7 +54,7 @@ defineProps<{
     );
 }
 .inner.active{
-    background: var(--surface-card);
+    background: var(--surface-card, #FFF);
 }
 .outer:hover>.inner.inner.active{
     background-color: #f6f6f6;

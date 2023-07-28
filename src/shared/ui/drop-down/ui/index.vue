@@ -37,7 +37,7 @@ selected.value = props.options.find(option => option.code == selCode.value)
 </script>
 <template>
     <div>
-      <div v-if="props.label" class="label d-flex-cb btn2">
+      <div v-if="props.label" class="label d-flex c-flex">
         {{ label }}
       </div>
       <div>
@@ -91,8 +91,8 @@ selected.value = props.options.find(option => option.code == selCode.value)
   }
   .list-btn{
     border-radius: 0.5rem;
-    border: 1px solid var(--border-inactive);
-    background: var(--background-surface-area);
+    border: 1px solid var(--border-inactive, #DADDE7);
+    background: var(--background-surface-area, #FFF);
 
     padding: 0.4rem 1rem;
     align-items: center;
@@ -107,16 +107,13 @@ selected.value = props.options.find(option => option.code == selCode.value)
   .list-btn:hover{
     border-color: var(--color-border-hover);
   }
-  .list-btn.bg-grey:hover{
-    border: 1px solid var(--border-inactive);
-  }
   .title{
     display: block; 
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; 
 
-    color: var(--text-icons-primary);
+    color: var(--text-icons-primary, #19191A);
   }
   .icon-cont{
     transition: .2s all ease;
