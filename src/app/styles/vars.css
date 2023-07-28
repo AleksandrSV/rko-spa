@@ -1,0 +1,37 @@
+:root{
+    /*surface*/
+    --surface-fill-2: #EFEFEB;
+    --surface-fill-3: #E8E8E3;
+    --surface-card: #FFF;
+    --surface-opacity-1: rgba(25, 25, 26, 0.04);
+    --surface-opacity-2: rgba(25, 25, 26, 0.08);
+
+    --background-surface-area: #FFF;
+    --background-default: #F6F6F4;
+
+    --system-surface-warning: rgba(255, 125, 31, 0.08);
+    --system-surface-error: rgba(237, 54, 54, 0.08);
+    --system-surface-interactive: rgba(65, 100, 235, 0.08);
+    --system-surface-success: rgba(12, 163, 27, 0.08);
+
+    /*text-icons*/
+    --text-icons-primary: #19191A;
+    --text-icons-secondary: #656567;
+    --text-icons-tertiary: #B5B5B5;
+    --text-icons-interactive: #4164EB;
+    --text-icons-warning: #FF7D1F;
+    --text-icons-error: #ED3636;
+    --text-icons-success: #0CA31B;
+    
+    /*buttons*/
+    --buttons-secondary: #EDEDED;
+    --buttons-alternative: #E8ECFD;
+
+    /*border*/
+    --border-divider: #E3E3E3;
+    --border-inactive: #DADDE7;
+    --border-active: #4164EB;
+
+    /*other*/
+    --neutral-02: #F4F4F4;
+}

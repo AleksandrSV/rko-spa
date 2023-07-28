@@ -16,7 +16,7 @@ defineProps<{
 <style scoped>
     .title{
         white-space: nowrap;
-        color: var(--text-icons-secondary, #5E6271);
+        color: var(--text-icons-secondary);
     }
     .info{
         display: flex;
@@ -24,6 +24,6 @@ defineProps<{
         gap: .75rem
     }
     .content{
-        color: var(--text-icons-primary, #141414);
+        color: var(--text-icons-primary);
     }
 </style>

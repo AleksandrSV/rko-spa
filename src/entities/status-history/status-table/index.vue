@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Claim } from 'interfaces/Claim';
+import type { Claim } from 'entities/claim';
 import { StatusRow } from 'entities/status-history';
 
 defineProps<{

@@ -1,14 +1,6 @@
-//@ts-ignore чото делать с этими импортами
-import Home from '/home.svg'
-//@ts-ignore
-import User from '/user.svg'
-//@ts-ignore
-import Wallet from '/wallet.svg'
-//@ts-ignore
-import Settings from '/settings.svg'
+import {Home, Settings, Wallet, User} from 'app/providers/icons'
 import type { BtnData } from 'shared/ui/ico-button'
 import { router } from 'app/providers'
-//сюда ещё экшн добавить и интерфейс сделать 
 
 export const links: {[key: string]: BtnData[]} = {
     top: [

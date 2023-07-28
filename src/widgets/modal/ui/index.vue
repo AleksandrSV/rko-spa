@@ -44,7 +44,7 @@ defineEmits(['close'])
   
 <style scoped>
 .no-disp{
-  display: none;
+    display: none;
 }
 .title{
     margin: 0;

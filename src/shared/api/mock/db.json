@@ -1,100 +1,314 @@
 {
   "references": {
     "categories": [
-      { "code": "INCOMING", "text": "Входящее" },
-      { "code": "OUTGOING", "text": "Исходящее" }
+      {
+        "code": "INCOMING",
+        "text": "Входящее"
+      },
+      {
+        "code": "OUTGOING",
+        "text": "Исходящее"
+      }
     ],
     "channels": [
-      { "code": "CHAT", "text": "Чат" },
-      { "code": "PHONE", "text": "Телефон" },
-      { "code": "EMAIL", "text": "E-mail" }
+      {
+        "code": "CHAT",
+        "text": "Чат"
+      },
+      {
+        "code": "PHONE",
+        "text": "Телефон"
+      },
+      {
+        "code": "EMAIL",
+        "text": "E-mail"
+      }
     ],
     "initiatorTypes": [
-      { "code": "CLIENT", "text": "Клиент" },
-      { "code": "NOT_CLIENT", "text": "Не Клиент" },
-      { "code": "PRODUCT", "text": "Основной продукт" },
-      { "code": "BANK", "text": "БАНК" },
-      { "code": "VERIFICATOR", "text": "Верификатор" }
+      {
+        "code": "CLIENT",
+        "text": "Клиент"
+      },
+      {
+        "code": "NOT_CLIENT",
+        "text": "Не Клиент"
+      },
+      {
+        "code": "PRODUCT",
+        "text": "Основной продукт"
+      },
+      {
+        "code": "BANK",
+        "text": "БАНК"
+      },
+      {
+        "code": "VERIFICATOR",
+        "text": "Верификатор"
+      }
     ],
     "divisions": [
-      { "code": "SELLPLUS", "text": "Sellplus" },
-      { "code": "KIK", "text": "КИК" },
-      { "code": "GUARANTEE", "text": "ЦБГ" },
-      { "code": "FACTORING", "text": "Факторинг" }
+      {
+        "code": "SELLPLUS",
+        "text": "Sellplus"
+      },
+      {
+        "code": "KIK",
+        "text": "КИК"
+      },
+      {
+        "code": "GUARANTEE",
+        "text": "ЦБГ"
+      },
+      {
+        "code": "FACTORING",
+        "text": "Факторинг"
+      }
     ],
     "priority": [
-      { "code": "CRITICAL", "text": "Критический" },
-      { "code": "HIGH", "text": "Высокий" },
-      { "code": "MEDIUM", "text": "Средний" },
-      { "code": "LOW", "text": "Низкий" },
-      { "code": "PAUSE", "text": "Приостановлено" }
+      {
+        "code": "CRITICAL",
+        "text": "Критический"
+      },
+      {
+        "code": "HIGH",
+        "text": "Высокий"
+      },
+      {
+        "code": "MEDIUM",
+        "text": "Средний"
+      },
+      {
+        "code": "LOW",
+        "text": "Низкий"
+      },
+      {
+        "code": "PAUSE",
+        "text": "Приостановлено"
+      }
     ],
     "statuses": [
-      { "code": "DRAFT", "text": "Черновик" },
-      { "code": "NEW", "text": "Новое" },
-      { "code": "PENDING", "text": "В ожидании" },
-      { "code": "IN_PROGRESS", "text": "В процессе" },
-      { "code": "DONE", "text": "Выполнено", "reasons": 
-        [
-          { "code": "DONE", "text": "Закрыто" },
-          { "code": "FORWARDED", "text": "Переведено в другое подразделение" }
+      {
+        "code": "DRAFT",
+        "text": "Черновик"
+      },
+      {
+        "code": "NEW",
+        "text": "Новое"
+      },
+      {
+        "code": "PENDING",
+        "text": "В ожидании"
+      },
+      {
+        "code": "IN_PROGRESS",
+        "text": "В процессе"
+      },
+      {
+        "code": "DONE",
+        "text": "Выполнено",
+        "reasons": [
+          {
+            "code": "DONE",
+            "text": "Закрыто"
+          },
+          {
+            "code": "FORWARDED",
+            "text": "Переведено в другое подразделение"
+          }
         ]
       },
-      { "code": "REJECTED", "text": "Отклонено", "reasons":
-        [
-          { "code": "INITIATOR_REJECTED", "text": "Отказ инициатора" },
-          { "code": "WRONG_CREATED", "text": "Ошибочно заведено" },
-          { "code": "DUPLICATE", "text": "Дубликат" }
+      {
+        "code": "REJECTED",
+        "text": "Отклонено",
+        "reasons": [
+          {
+            "code": "INITIATOR_REJECTED",
+            "text": "Отказ инициатора"
+          },
+          {
+            "code": "WRONG_CREATED",
+            "text": "Ошибочно заведено"
+          },
+          {
+            "code": "DUPLICATE",
+            "text": "Дубликат"
+          }
         ]
       }
     ],
     "claimTypes": [
-      { "code": "ERROR", "text": "Ошибка в системе" },
-      { "code": "NAVIGATION", "text": "Навигация в системе ИС ROWI" },
-      { "code": "INQUIRY", "text": "Запрос справок и выписок" },
-      { "code": "DATA_UPDATE", "text": "Обновление данных" },
-      { "code": "CONSULTATION", "text": "Консультация" },
-      { "code": "CLOSE_ACCOUNT", "text": "Закрытие счета" },
-      { "code": "CURRENCY_CONTROL", "text": "Валютный контроль" },
-      { "code": "CB_REQUEST", "text": "Запрос ЦБ" },
-      { "code": "NEW_SERVICE", "text": "Новая услуга" },
-      { "code": "PROFILE_MANAGEMENT", "text": "Управление УЗ ИС РОВИ" },
-      { "code": "UNKNOWN", "text": "Невыясненные" },
-      { "code": "EXTRA_ACCOUNT", "text": "Открытие дополнительного счета" },
-      { "code": "TARIFF_CHANGE", "text": "Смена тарифа" },
-      { "code": "NOMINAL_PAYMENT", "text": "Создание п\\п с номинального счета" },
-      { "code": "CLAIM", "text": "Претензия" },
-      { "code": "OTHER", "text": "Иное" }
+      {
+        "code": "ERROR",
+        "text": "Ошибка в системе"
+      },
+      {
+        "code": "NAVIGATION",
+        "text": "Навигация в системе ИС ROWI"
+      },
+      {
+        "code": "INQUIRY",
+        "text": "Запрос справок и выписок"
+      },
+      {
+        "code": "DATA_UPDATE",
+        "text": "Обновление данных"
+      },
+      {
+        "code": "CONSULTATION",
+        "text": "Консультация"
+      },
+      {
+        "code": "CLOSE_ACCOUNT",
+        "text": "Закрытие счета"
+      },
+      {
+        "code": "CURRENCY_CONTROL",
+        "text": "Валютный контроль"
+      },
+      {
+        "code": "CB_REQUEST",
+        "text": "Запрос ЦБ"
+      },
+      {
+        "code": "NEW_SERVICE",
+        "text": "Новая услуга"
+      },
+      {
+        "code": "PROFILE_MANAGEMENT",
+        "text": "Управление УЗ ИС РОВИ"
+      },
+      {
+        "code": "UNKNOWN",
+        "text": "Невыясненные"
+      },
+      {
+        "code": "EXTRA_ACCOUNT",
+        "text": "Открытие дополнительного счета"
+      },
+      {
+        "code": "TARIFF_CHANGE",
+        "text": "Смена тарифа"
+      },
+      {
+        "code": "NOMINAL_PAYMENT",
+        "text": "Создание п\\п с номинального счета"
+      },
+      {
+        "code": "CLAIM",
+        "text": "Претензия"
+      },
+      {
+        "code": "OTHER",
+        "text": "Иное"
+      }
     ],
     "claimThemes": [
-      { "code": "IS_ROWI", "text": "ИС РОВИ" },
-      { "code": "CHAT", "text": "Чат" },
-      { "code": "IBANK ", "text": "iBank" },
-      { "code": "ACCOUNT_OPEN_INQUIRY", "text": "Справка об открытии счета" },
-      { "code": "CASH_FLOW_INQUIRY", "text": "Справка об оборотах" },
-      { "code": "ACCOUNT_CLOSE_INQUIRY", "text": "Справка о закрытии счета" },
-      { "code": "CARD_INDEX_INQUIRY", "text": "Справка о картотеке" },
-      { "code": "LOAN_DEBT_INQUIRY", "text": "Справка о ссудной задолженности" },
-      { "code": "EXCERPT", "text": "Выписка" },
-      { "code": "VISIT_TO_CLIENT", "text": "С выездом к Клиенту" },
-      { "code": "NO_VISIT_TO_CLIENT", "text": "Без выезда к Клиенту" },
-      { "code": "TARIFFS", "text": "Тарифы" },
-      { "code": "DOCUMENTS", "text": "Документы" },
-      { "code": "ACCOUNT_BLOCK", "text": "Ограничения по счету" },
-      { "code": "PAYMENTS", "text": "Платежи" },
-      { "code": "INTEREST_ON_BALANCE", "text": "Начисление % на остаток" },
-      { "code": "INITIATED_BY_CLIENT", "text": "По инициативе Клиента" },
-      { "code": "DOCUMENTS_REQUEST", "text": "Запрос документов" },
-      { "code": "BANK_SUPPORT_OF_CONTRACT", "text": "Банковское сопровождение контракта" },
-      { "code": "SUPPORT_OF_PREGIVEN_ACPT", "text": "Сопровождение заранее данного акцепта" },
-      { "code": "CREATE_NEW_PROFILE", "text": "Заведение новой УЗ" },
-      { "code": "BLOCK_PROFILE", "text": "Блокировка УЗ" },
-      { "code": "UNBLOCK_PROFILE", "text": "Разблокировка УЗ" },
-      { "code": "LEGAL_SUPPORT_REQUIRED", "text": "Требуется юридическое сопровождение" },
-      { "code": "LEGAL_SUPPORT_NOT_REQUIRED", "text": "Не требуется юридическое сопровождение" },
-      { "code": "OTHER ", "text": "Иное" }
+      {
+        "code": "IS_ROWI",
+        "text": "ИС РОВИ"
+      },
+      {
+        "code": "CHAT",
+        "text": "Чат"
+      },
+      {
+        "code": "IBANK ",
+        "text": "iBank"
+      },
+      {
+        "code": "ACCOUNT_OPEN_INQUIRY",
+        "text": "Справка об открытии счета"
+      },
+      {
+        "code": "CASH_FLOW_INQUIRY",
+        "text": "Справка об оборотах"
+      },
+      {
+        "code": "ACCOUNT_CLOSE_INQUIRY",
+        "text": "Справка о закрытии счета"
+      },
+      {
+        "code": "CARD_INDEX_INQUIRY",
+        "text": "Справка о картотеке"
+      },
+      {
+        "code": "LOAN_DEBT_INQUIRY",
+        "text": "Справка о ссудной задолженности"
+      },
+      {
+        "code": "EXCERPT",
+        "text": "Выписка"
+      },
+      {
+        "code": "VISIT_TO_CLIENT",
+        "text": "С выездом к Клиенту"
+      },
+      {
+        "code": "NO_VISIT_TO_CLIENT",
+        "text": "Без выезда к Клиенту"
+      },
+      {
+        "code": "TARIFFS",
+        "text": "Тарифы"
+      },
+      {
+        "code": "DOCUMENTS",
+        "text": "Документы"
+      },
+      {
+        "code": "ACCOUNT_BLOCK",
+        "text": "Ограничения по счету"
+      },
+      {
+        "code": "PAYMENTS",
+        "text": "Платежи"
+      },
+      {
+        "code": "INTEREST_ON_BALANCE",
+        "text": "Начисление % на остаток"
+      },
+      {
+        "code": "INITIATED_BY_CLIENT",
+        "text": "По инициативе Клиента"
+      },
+      {
+        "code": "DOCUMENTS_REQUEST",
+        "text": "Запрос документов"
+      },
+      {
+        "code": "BANK_SUPPORT_OF_CONTRACT",
+        "text": "Банковское сопровождение контракта"
+      },
+      {
+        "code": "SUPPORT_OF_PREGIVEN_ACPT",
+        "text": "Сопровождение заранее данного акцепта"
+      },
+      {
+        "code": "CREATE_NEW_PROFILE",
+        "text": "Заведение новой УЗ"
+      },
+      {
+        "code": "BLOCK_PROFILE",
+        "text": "Блокировка УЗ"
+      },
+      {
+        "code": "UNBLOCK_PROFILE",
+        "text": "Разблокировка УЗ"
+      },
+      {
+        "code": "LEGAL_SUPPORT_REQUIRED",
+        "text": "Требуется юридическое сопровождение"
+      },
+      {
+        "code": "LEGAL_SUPPORT_NOT_REQUIRED",
+        "text": "Не требуется юридическое сопровождение"
+      },
+      {
+        "code": "OTHER ",
+        "text": "Иное"
+      }
     ]
-  },  
+  },
   "claim": [
     {
       "id": 1,
@@ -110,7 +324,7 @@
       "priority": "MEDIUM",
       "priority_reason": "Важная причина",
       "updated_date": "2023-07-09T00:00:00+00:00",
-      "client": { 
+      "client": {
         "id": 1,
         "global_company_id": "null",
         "inn": "1234567980",
@@ -129,6 +343,7 @@
       "status": "NEW",
       "status_reason": "Важная причина",
       "created_date": "2023-07-25T10:26:09.940Z",
+      "pause_till": "2023-07-28T09:35:10.908Z",
       "status_history": [
         {
           "id": 1234567891,
@@ -240,9 +455,9 @@
       "service_count": 1,
       "priority": "HIGH",
       "priority_reason": "Важная причина",
-      "pause_till":  "2023-07-27T09:35:10.908Z",
+      "pause_till": "2023-07-28T09:35:10.908Z",
       "updated_date": "2023-07-15T00:00:00+00:00",
-      "client": { 
+      "client": {
         "id": 2,
         "global_company_id": "null",
         "inn": "9876543210",
@@ -296,7 +511,7 @@
       "is_first_line": false,
       "claim_type": "INQUIRY",
       "claim_theme": "ACCOUNT_BLOCK",
-      "pause_till":  "2023-07-25T09:35:10.908Z",
+      "pause_till": "2023-07-25T09:35:10.908Z",
       "description": "Клиент хочет узнать, как изменить свои банковские реквизиты для осуществления платежей.",
       "service_count": 1,
       "priority": "LOW",
@@ -350,8 +565,8 @@
       "service_count": 1,
       "priority": "MEDIUM",
       "priority_reason": "Важная причина",
-      "pause_till":  "2023-07-26T09:35:10.908Z",
-      "client": { 
+      "pause_till": "2023-07-29T09:35:10.908Z",
+      "client": {
         "id": 4,
         "global_company_id": "null",
         "inn": "7890123450",
@@ -410,7 +625,7 @@
       "service_count": 1,
       "priority": "LOW",
       "priority_reason": "Обычная причина",
-      "client": {  
+      "client": {
         "id": 4,
         "global_company_id": "null",
         "inn": "3456789012",
@@ -423,6 +638,8 @@
       "status": "PENDING",
       "status_reason": "Обычная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-09T00:00:00+00:00",
+      "pause_till": "2023-07-29T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543215,
@@ -468,7 +685,7 @@
       "service_count": 1,
       "priority": "CRITICAL",
       "priority_reason": "Важная причина",
-      "client": { 
+      "client": {
         "id": 5,
         "global_company_id": "null",
         "inn": "5678901234",
@@ -478,10 +695,11 @@
         "short_name": "ИП Сергеев"
       },
       "documents": [],
-      "status": "IN_PROGRESS",
+      "status": "NEW",
       "status_reason": "Важная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
-      "updated_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-29T00:00:00+00:00",
+      "pause_till": "2023-07-29T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543218,
@@ -525,9 +743,9 @@
       "claim_theme": "BANK_SUPPORT_OF_CONTRACT",
       "description": "Клиент хочет узнать о существующих ограничениях и лимитах на использование своей банковской карты.",
       "service_count": 1,
-      "priority": "LOW",
+      "priority": "CRITICAL",
       "priority_reason": "Обычная причина",
-      "client": {  
+      "client": {
         "id": 7,
         "global_company_id": "null",
         "inn": "6789012345",
@@ -540,6 +758,8 @@
       "status": "IN_PROGRESS",
       "status_reason": "Обычная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-09T00:00:00+00:00",
+      "pause_till": "2023-07-27T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543221,
@@ -595,7 +815,7 @@
       "service_count": 1,
       "priority": "HIGH",
       "priority_reason": "Важная причина",
-      "client": {  
+      "client": {
         "id": 8,
         "global_company_id": "null",
         "inn": "7890123456",
@@ -608,6 +828,8 @@
       "status": "IN_PROGRESS",
       "status_reason": "Важная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-09T00:00:00+00:00",
+      "pause_till": "2023-07-27T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543225,
@@ -634,7 +856,7 @@
       "service_count": 1,
       "priority": "MEDIUM",
       "priority_reason": "Важная причина",
-      "client": {  
+      "client": {
         "id": 9,
         "global_company_id": "null",
         "inn": "8901234567",
@@ -647,6 +869,8 @@
       "status": "NEW",
       "status_reason": "Важная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-09T00:00:00+00:00",
+      "pause_till": "2023-07-27T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543226,
@@ -692,7 +916,7 @@
       "service_count": 1,
       "priority": "LOW",
       "priority_reason": "Обычная причина",
-      "client": {  
+      "client": {
         "id": 10,
         "global_company_id": "null",
         "inn": "9012345678",
@@ -705,6 +929,8 @@
       "status": "PENDING",
       "status_reason": "Обычная причина",
       "created_date": "2023-07-09T00:00:00+00:00",
+      "updated_date": "2023-07-09T00:00:00+00:00",
+      "pause_till": "2023-07-27T09:35:10.908Z",
       "status_history": [
         {
           "id": 9876543226,

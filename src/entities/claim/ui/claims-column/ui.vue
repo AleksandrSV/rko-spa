@@ -33,6 +33,6 @@ const cStore = useClaimStore()
         flex-grow: 1;
         width: 27rem;
         border-radius: 1rem;
-        background: var(--surface-opacity-2, rgba(25, 25, 26, 0.08));
+        background: var(--surface-opacity-2);
    }
 </style>

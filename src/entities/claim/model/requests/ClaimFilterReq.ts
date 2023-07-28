@@ -1,4 +1,4 @@
-import type {IPagenation} from "../../../../shared/api/utils/pagenation";
+import type {IPagenation} from "shared/api/utils";
 
 export interface ClaimFilterReq extends IPagenation {
     "status": string|null,

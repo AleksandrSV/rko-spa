@@ -19,9 +19,9 @@ defineProps<{
         flex-direction: column;
         align-items: center;
         border-radius: 1.25rem;
-        background: var(--surface-opacity-2, rgba(25, 25, 26, 0.08));
+        background: var(--surface-opacity-2);
 
-        color: var(--text-icons-primary, #19191A);
+        color: var(--text-icons-primary);
     }
     .small{
         padding: 0rem 0.5rem;
@@ -38,11 +38,11 @@ defineProps<{
         border-radius: 0.75rem;
     }
     .red{
-        color: var(--text-icons-error, #ED3636);
-        background: var(--system-surface-error, rgba(237, 54, 54, 0.08));
+        color: var(--text-icons-error);
+        background: var(--system-surface-error);
     }
     .expired{
         color: white;
-        background: var(--text-icons-error, #ED3636);
+        background: var(--text-icons-error);
     }
 </style>
