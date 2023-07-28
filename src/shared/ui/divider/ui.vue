@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { DividerSvg } from 'app/providers/icons';
+//@ts-ignore
+import  DividerSvg  from '/divider.svg';
 </script>
 
 <template>

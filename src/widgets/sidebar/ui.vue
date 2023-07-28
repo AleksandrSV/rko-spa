@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import {Logo} from 'app/providers/icons'
+//@ts-ignore
+import Logo from '/logo.svg'
 import {IcoBtn} from 'shared/ui/ico-button'
 import { links } from './const';
 </script>
@@ -26,8 +27,9 @@ import { links } from './const';
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        border-right: 1px solid var(--surface-fill-2);
-        background: var(--background-surface-area);
+        flex-shrink: 0;
+        border-right: 1px solid var(--surface-fill-2, #EFEFEB);
+        background: var(--background-surface-area, #FFF);
     }
     .items{
         width: 3rem;
@@ -39,5 +41,6 @@ import { links } from './const';
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        align-self: stretch;
     }
 </style>

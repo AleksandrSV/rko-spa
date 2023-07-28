@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Austro } from 'app/providers/icons';
+//@ts-ignore
+import Austro from '/astronaut.svg'
 
 </script>
 
@@ -35,15 +36,15 @@ import { Austro } from 'app/providers/icons';
         flex-shrink: 0;
 
         border-radius: 1.25rem;
-        background: var(--surface-opacity-1);
+        background: var(--surface-opacity-1, rgba(25, 25, 26, 0.04));
     }
     h4{
-        color: var(--text-icons-primary);
+        color: var(--text-icons-primary, #19191A);
         text-align: center;
         margin: 0;
     }
     span{
-        color: var(--text-icons-secondary);
+        color: var(--text-icons-secondary, #656567);
         text-align: center;
     }
 </style>

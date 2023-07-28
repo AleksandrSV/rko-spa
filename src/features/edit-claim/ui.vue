@@ -13,7 +13,7 @@ import EditNav from "./edit-nav.vue"
 
 <style scoped>
   .form-title{
-    color: var(--text-icons-primary);
+    color: var(--text-icons-primary, #19191A);
   }
   .ecForm{
     height: 100%;

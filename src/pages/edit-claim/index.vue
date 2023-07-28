@@ -1,4 +1,6 @@
 <script setup lang="ts">
+//нагромаждено всего, это всё зарефачу но потом
+import { useClaimStore, type Claim } from "entities/claim";
 import {ActionBar, ClaimEditor, useEditClaimStore} from "features/edit-claim";
 import { watch } from "vue";
 const props = defineProps(['clientId', 'claimId'])
@@ -17,6 +19,7 @@ watch(props, () => store.fetchClaim(props.claimId))
                     <div class="client"></div>
                 </div>
             </div>
+            
         </div>
         <div class="chat">
         </div>
@@ -35,7 +38,7 @@ watch(props, () => store.fetchClaim(props.claimId))
         width: 100%;
         height: 40rem;
         border-radius: 0.75rem;
-        background: var(--surface-card);
+        background: var(--surface-card, #FFF);
     }
     .container{
         height: 100%;

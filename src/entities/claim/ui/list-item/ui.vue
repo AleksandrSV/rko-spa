@@ -11,7 +11,7 @@ const props = defineProps<{
 const conf = useClaimConfig(props.claim)
 
 const inProgress = computed(()=>props.claim.status=='IN_PROGRESS')
-const workDate = computed(()=>inProgress.value?`В работе с ${conf.updDate.value}`:`По плану до ${conf.pauseTill.value}`)
+const workDate = computed(()=>inProgress.value?`В работе с${conf.updDate.value}`:`По плану до ${conf.pauseTill.value}`)
 </script>
 
 <template>
@@ -35,17 +35,11 @@ const workDate = computed(()=>inProgress.value?`В работе с ${conf.updDat
             <SqBadge :type="inProgress?'gray':'red'">{{workDate}}</SqBadge>
         </div>
         <div  class="cell b2">{{ claim.assignee }}</div>
-        <div  class="cell b2">
-            <div>{{ conf.createdDateOnly.value }}</div>
-            <div class="cap time">{{ conf.createdTimeOnly.value }}</div>
-        </div>
+        <div  class="cell b2">{{ conf.createdDate.value }}</div>
     </div>
 </template>
 
 <style scoped>
-    .item{
-        color: var(--text-icons-secondary);
-    }
    .item{
         margin: 1rem 0;
    }
@@ -53,8 +47,9 @@ const workDate = computed(()=>inProgress.value?`В работе с ${conf.updDat
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: .4rem
    }
    .inn{
-        color: var(--text-icons-secondary);
+        color: var(--text-icons-secondary, #656567);
    }
 </style>

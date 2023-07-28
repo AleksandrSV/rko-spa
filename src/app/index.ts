@@ -1,4 +1,4 @@
-//@ts-ignore 
+//@ts-ignore пока без рови компонентов
 import components from '@factoringplus/pl-components-pack-v3'
 import '@factoringplus/pl-components-pack-v3/dist/style.css'
 
@@ -28,8 +28,7 @@ app.use(vueKeycloak,{
         }
     }
 )
-/*
-app.use(router)
-    .use(pinia)
-    .use(components)
-    .mount('#app')*/
+// app.use(router)
+// .use(pinia)
+// .use(components)
+// .mount('#app')

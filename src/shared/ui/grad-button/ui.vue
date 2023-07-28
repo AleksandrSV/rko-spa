@@ -1,5 +1,5 @@
 <script setup lang="ts">
-//вцелом пойдет, но стремноватый градиент
+//отвратительный компонент, не понял я как градиенты делать, но явно не так (мб через бефор?)
 </script>
 
 <template>
@@ -37,9 +37,9 @@
     width: 44px;
     height: 44px; 
     border-radius: .6rem;
-    background: var(--buttons-secondary);
+    background: var(--buttons-secondary, #f6f6f6);
 
-    color: var(--text-icons-primary);
+    color: var(--text-icons-primary, #19191A);
     font-family: Inter;
     font-size: 1.125rem;
     font-style: normal;

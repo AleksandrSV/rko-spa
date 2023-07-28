@@ -43,7 +43,7 @@ api.interceptors.request.use(
         console.log(error?.response)
         Promise.reject(error);
     });
-const bearerAuth = (token: string | null) => {
+function bearerAuth(token: string | null) {
     return `Bearer ${token}`
 }
 */
