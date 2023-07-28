@@ -76,10 +76,10 @@ defineProps<{
         align-items: center;
         gap: 0.25rem;
         border-radius: 0.5rem;
-        background: var(--surface-opacity-2, rgba(25, 25, 26, 0.08));
+        background: var(--surface-opacity-2);
         border: 0;
 
-        color: var(--text-icons-primary, #19191A);
+        color: var(--text-icons-primary);
         text-align: center;
     }
     .badge-men{
@@ -89,9 +89,8 @@ defineProps<{
         align-items: center;
         gap: 0.25rem;
         border-radius: 2rem;
-        background: var(--buttons-secondary, #EDEDED);
-
-        color: var(--text-icons-secondary, #656567);
+        background: var(--buttons-secondary);
+        color: var(--text-icons-secondary);
     }
     .item {
         text-align: left;

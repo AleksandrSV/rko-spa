@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { Badge } from 'shared/ui/badge';
 import { IcoBtn, type BtnData } from 'shared/ui/ico-button';
-//@ts-ignore
-import Phone from "/phone.svg"
-//@ts-ignore,
-import Chat from "/chat.svg"
-import { DropDown } from 'shared/ui/drop-down';
+import { Phone, Chat } from 'app/providers/icons';
 import  Cell from './info-cell.vue'
 import { useClaimConfig, type Claim } from 'entities/claim';
 import { SqBadge } from 'shared/ui/sq-badge';
@@ -70,6 +66,6 @@ const conf = useClaimConfig(props.claim!)
         flex-direction: column;
         gap: 3rem;
         border-radius: 1.25rem;
-        background: var(--surface-opacity-1, rgba(25, 25, 26, 0.04));
+        background: var(--surface-opacity-1);
     }
 </style>

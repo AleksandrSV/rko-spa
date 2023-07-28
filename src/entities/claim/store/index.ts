@@ -1,25 +1,13 @@
 import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
-import type {Claim, CreateReq, UpdateReq} from '../model'
-import type {ClaimFilterReq} from "../model/requests/ClaimFilterReq";
-import {forward, getClaims} from "../../../shared/api/claim-api";
-import {useClaimService} from "../../../shared/api/commonApi";
+import type {Claim, ClaimReq, UpdateReq, ClaimFilterReq} from '../model'
+import {forward, getClaims} from "shared/api/claim-api";
+import {useClaimService} from "shared/api/commonApi";
 
 export const useClaimStore = defineStore('claims', () => {
   const claims = ref<Claim[]>()
   const fetchClaims = async () => {
     claims.value = await getClaims();
-    //   await updateClaim({
-    //     "priority_reason": "OUTGOING",
-    //     "priority": "MEDIUM",
-    //     "assignee":"supervisor",
-    //     "comment":"абоба",
-    //     "documents":[]
-    //   } ,6);
-  }
-  //неуверен надо ли с новым уи, если нет уберу
-  const getClaimsByStatus = (status: string) =>{
-    return claims.value?.filter(claim => claim.status == status); 
   }
 
   //неуверен как определять текущее обращение пусть берётся первая со статусом ин прогрес
@@ -40,7 +28,7 @@ export const useClaimStore = defineStore('claims', () => {
       const minutes = timeDiff / 60000;
       return minutes <= 15
   }
-  function isToday(claim: Claim) {
+  const isToday = (claim: Claim) => {
     if (claim.pause_till){
       const date = new Date(claim.pause_till).toISOString().split('T')[0];
       const currentDate = new Date().toISOString().split('T')[0];
@@ -48,7 +36,7 @@ export const useClaimStore = defineStore('claims', () => {
     }
     return false
   }
-  function isTomorrow(claim: Claim) {
+  const isTomorrow = (claim: Claim) => {
     if (claim.pause_till){
       const date = new Date(claim.pause_till!).toISOString().split('T')[0];
       const tomorrowDateTime = new Date();
@@ -77,5 +65,5 @@ export const useClaimStore = defineStore('claims', () => {
       });
     }
   })
-  return {claims, fetchClaims, getClaimsByStatus, currentClaim, sorted}
+  return {claims, fetchClaims, currentClaim, sorted}
 })

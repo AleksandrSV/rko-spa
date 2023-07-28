@@ -2,22 +2,22 @@
 
 import { SideBar } from "widgets/sidebar";
 import { NavBar } from "widgets/navbar"
-/*import { computed, ref } from 'vue';
+import { computed } from "vue";
 import { router } from "app/providers";
-import { CFooter } from "widgets/footer";
 
-const sideOpen = ref(false)
-const sideControl = () =>{
-    sideOpen.value = !sideOpen.value
-}
-const curRoute = computed(()=>router.currentRoute.value.name?.toString())*/
+const curRoute = computed(()=>{
+    if(router.currentRoute.value.matched[0])
+        return router.currentRoute.value.matched[0].name?.toString()
+    else return ''
+})
+
 </script>
 
 <template>
     <div class="d-flex container">
         <SideBar/>
         <div class="nm-cont d-flex">
-            <NavBar/>
+            <NavBar :type="curRoute"/>
             <div class="main-content">
                 <slot></slot>
             </div>

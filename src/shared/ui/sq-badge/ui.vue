@@ -26,9 +26,9 @@ defineProps<{
     }
     .id{
         padding: 0rem 0.5rem;
-        border: 1px solid var(--border-divider, #E3E3E3);
-        background: var(--surface-card, #FFF);
-        color: var(--text-icons-interactive, #4164EB);
+        border: 1px solid var(--border-divider);
+        background: var(--surface-card);
+        color: var(--text-icons-interactive);
 
         /* Subtitle/S1-Semi Bold */
         font-family: Inter;
@@ -39,33 +39,33 @@ defineProps<{
         letter-spacing: 0.006rem;
     }
     .CRITICAL, .PENDING{
-        background: var(--system-surface-warning, rgba(255, 125, 31, 0.08));
-        color: var(--text-icons-warning, #FF7D1F);
+        background: var(--system-surface-warning);
+        color: var(--text-icons-warning);
     }
     .gray{
-        border: 1px solid var(--border-divider, #E3E3E3);
-        background: var(--surface-card, #FFF);
+        border: 1px solid var(--border-divider);
+        background: var(--surface-card);
     }
     .red{
-        color: var(--text-icons-error, #ED3636);
-        background: var(--system-surface-error, rgba(237, 54, 54, 0.08));
+        color: var(--text-icons-error);
+        background: var(--system-surface-error);
     }
     .HIGH, .REJECTED{
         color: white;
-        background: var(--text-icons-error, #ED3636);
+        background: var(--text-icons-error);
     }
     .LOW, .PAUSE, .MEDIUM, .DRAFT, .DONE{
-        color: var(--text-icons-secondary, #656567);
-        background: var(--surface-opacity-1, rgba(25, 25, 26, 0.04));
+        color: var(--text-icons-secondary);
+        background: var(--surface-opacity-1);
     }
     
     .NEW{
-        color: var(--text-icons-interactive, #4164EB);
-        background: var(--system-surface-interactive, rgba(65, 100, 235, 0.08));
+        color: var(--text-icons-interactive);
+        background: var(--system-surface-interactive);
     }
     .IN_PROGRESS{
-        color: var(--text-icons-success, #0CA31B);
-        background: var(--system-surface-success, rgba(12, 163, 27, 0.08));
+        color: var(--text-icons-success);
+        background: var(--system-surface-success);
     }
    
 </style>

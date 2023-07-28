@@ -1,5 +1,5 @@
 h3{
-    color: var(--text-icons-primary, #19191A);
+    color: var(--text-icons-primary);
     /* Headline/H3-Semi Bold */
     font-family: Inter;
     font-size: 2rem;

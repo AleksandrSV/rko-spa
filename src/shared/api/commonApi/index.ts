@@ -1,18 +1,9 @@
-//@ts-ignore
-import axios, {AxiosResponse} from 'axios'
 import type { Claim, UpdateReq,
-    CloseReq, ForwardReq,
-    PauseReq, CreateReq } from '../../../entities/claim';
-import type { References } from '../../../entities/reference'
-//@ts-ignore
+    CloseReq, ForwardReq,ReasignPostRequest,
+    PauseReq, ClaimReq ,ClaimFilterReq, } from 'entities/claim';
+import type { References } from 'entities/reference'
 import api from "../index";
-import type {ClaimFilterReq} from "../../../entities/claim/model/requests/ClaimFilterReq";
-//@ts-ignore
-import type {ReasignPostRequest} from "../../../entities/claim/model/requests/ReasignPostRequest";
 
-const useCommonApi = () => {
-
-}
 //requests
 export const useReferenceService = () => {
     const getReferences = async () => {
@@ -30,11 +21,11 @@ export const useClaimService = () => {
         return (await api.get<Claim>(`/claims/${id}`)).data;
     };
 
-    const createClaim = async (claim: CreateReq) :Promise<Claim>=> {
+    const createClaim = async (claim: ClaimReq) :Promise<Claim>=> {
         return await api.post('/claims', claim);
     };
 
-    const editClaim = async (claim: CreateReq, id: number) :Promise<Claim>=> {
+    const editClaim = async (claim: ClaimReq, id: number) :Promise<Claim>=> {
         return await api.post(`/claims/${id}`, claim)
     };
 

@@ -4,7 +4,7 @@ import { BadgeBtnGrad } from 'shared/ui/badge-btn-grad';
 import { Menu, type IMenuItem } from 'shared/ui/menu';
 
 const isCur = route => router.currentRoute.value.path==route
-console.log(router.currentRoute.value.path)
+
 const createItmes: IMenuItem[] = [
       {text: "Обращение", action: () => router.push(`/claim`)},
       {text: "Открытие счета"},

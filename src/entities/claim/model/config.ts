@@ -51,19 +51,27 @@ export const useClaimConfig = (claim: Claim) =>{
       const minutes = String(date.getMinutes()).padStart(2, '0');
     
       const formattedDate = `${day}.${month}.${year} в ${hours}.${minutes}`;
+      const dateOnly = `${day}.${month}.${year}`;
+      const timeOnly = `${hours}.${minutes}`;
     
-      return formattedDate;
+      return {formattedDate, dateOnly, timeOnly};
     }
     const createdDate = computed(() => {
-      return formatDate(claim.created_date);
+      return formatDate(claim.created_date).formattedDate;
+    })
+    const createdDateOnly = computed(() => {
+      return formatDate(claim.created_date).dateOnly;
+    })
+    const createdTimeOnly = computed(() => {
+      return formatDate(claim.created_date).timeOnly;
     })
     const pauseTill = computed(() => {
       if (claim.pause_till)
-        return formatDate(claim.pause_till);
+        return formatDate(claim.pause_till).formattedDate;
     })
     const updDate = computed(() => {
-      if (claim.pause_till)
-        return formatDate(claim.updated_date);
+      if (claim.updated_date)
+        return formatDate(claim.updated_date).formattedDate;
     })
  
     const minsFromCreation = () =>{
@@ -116,5 +124,6 @@ export const useClaimConfig = (claim: Claim) =>{
     return { createdDate, channelLine,initiator, 
              status, priority, type, inWorkFor,
              theme, pauseTill,isExpired, menuItems,
-             minsFromCreation, updDate}
+             minsFromCreation, updDate, createdDateOnly,
+             createdTimeOnly}
 }
