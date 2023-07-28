@@ -1,35 +1,39 @@
+
 import type { CRClient, Claim, ClaimReq } from "entities/claim";
 
-export const claimtoReq = (claim: Claim): ClaimReq => {
+
+
+
+export const claimtoReq = (claim: Claim): CreateReq => {
     const crClient: CRClient = {
-      globalCompanyId: claim.client?.global_company_id ? Number(claim.client.global_company_id) : 0,
+      globalCompanyId: claim.client?.globalCompanyId ? Number(claim.client.globalCompanyId) : 0,
       plCompanyId: claim.client?.id.toString() || '',
       inn: claim.client?.inn || '',
       kpp: claim.client?.kpp || '',
       ogrn: claim.client?.ogrn || '',
-      fullName: claim.client?.full_name || '',
-      shortName: claim.client?.short_name || '',
+      fullName: claim.client?.fullName || '',
+      shortName: claim.client?.shortName || '',
     };
   
-    const nonEmptyProps: Partial<ClaimReq> = {
+    const nonEmptyProps: Partial<CreateReq> = {
       category: claim.category,
       channel: claim.channel,
-      initiatorType: claim.initiator_type,
-      isFirstLine: claim.is_first_line,
-      claimType: claim.claim_type,
-      claimTheme: claim.claim_theme,
+      initiatorType: claim.initiatorType,
+      isFirstLine: claim.isFirstLine,
+      claimType: claim.claimType,
+      claimTheme: claim.claimTheme,
       description: claim.description,
-      serviceCount: claim.service_count,
+      serviceCount: claim.serviceCount,
       priority: claim.priority,
-      priority_reason: claim.priority_reason,
+      priority_reason: claim.priorityReason,
       assignee: claim.assignee,
       comment: claim.comment,
       client: crClient,
       documents: claim.documents,
     };
   
-    const claimReq: ClaimReq = Object.fromEntries(
+    const claimReq: CreateReq = Object.fromEntries(
       Object.entries(nonEmptyProps).filter(([_, value]) => value !== undefined && value !== null)
-    ) as unknown as ClaimReq;
+    ) as unknown as CreateReq;
     return claimReq;
 }

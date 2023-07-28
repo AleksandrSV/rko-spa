@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import type { Claim, UpdateReq,
              CloseReq, ForwardReq, 
-             PauseReq, ClaimReq } from 'entities/claim/model';
+             PauseReq, CreateReq } from 'entities/claim/model';
 import type { References } from 'entities/reference'
 // import {updateToken, useKeycloak} from "shared/lib/vue-keycloak/src/vue3-keycloak.js";
 
@@ -60,11 +60,11 @@ export const getClaimById = async (id: number) => {
     return (await api.get<Claim>(`/claim/${id}`)).data
 }
 
-export const createClaim = async (claim: ClaimReq) => {
+export const createClaim = async (claim: CreateReq) => {
     return await api.post('/claim', {...claim})
 }
 
-export const editClaim = async (claim: ClaimReq, id: number) => {
+export const editClaim = async (claim: CreateReq, id: number) => {
     return await api.post(`/claim/${id}`, {...claim})
 }
 
